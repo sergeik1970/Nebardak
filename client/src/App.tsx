@@ -52,7 +52,7 @@ function App() {
       </div>
       
       <p className="footer">
-        Проект настроен для командной разработки
+        © 2025 Nebardak
       </p>
     </div>
   )
