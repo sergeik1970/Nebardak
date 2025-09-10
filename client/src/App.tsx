@@ -12,7 +12,7 @@ function App() {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:3000/api");
+      const response = await fetch("/api");
 
       if (!response.ok) {
         throw new Error(

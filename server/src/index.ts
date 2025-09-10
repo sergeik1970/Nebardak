@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
 
 // Загрузка переменных окружения
 dotenv.config();
@@ -16,6 +17,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Обслуживание статических файлов React приложения
+app.use(express.static(path.join(__dirname, '../../client/dist')));
+
 // Маршрут для проверки работоспособности сервера
 app.get('/health', (req: Request, res: Response) => {
   res.status(200).send('Сервер работает');
@@ -24,6 +28,11 @@ app.get('/health', (req: Request, res: Response) => {
 // Тестовый маршрут API
 app.get('/api', (req: Request, res: Response) => {
   res.json({ message: 'Добро пожаловать в API Nebardak!' });
+});
+
+// Обработка всех остальных маршрутов - возвращаем React приложение
+app.get('*', (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
 });
 
 // Запуск сервера

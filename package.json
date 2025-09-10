@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js",
+    "start": "node server/dist/index.js",
     "dev:server": "nodemon --exec ts-node server/src/index.ts",
     "dev:client": "cd client && npm run dev",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build:server": "tsc -p server/tsconfig.json",
     "build:client": "cd client && npm run build",
-    "build": "npm run build:server && npm run build:client",
+    "build": "npm install --prefix client && npm run build:client && npm run build:server",
     "typecheck:server": "tsc -p server/tsconfig.json --noEmit",
     "typecheck:client": "cd client && tsc --noEmit",
     "typecheck": "npm run typecheck:server && npm run typecheck:client"
@@ -24,15 +24,15 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "git": "^0.1.5"
-  },
-  "devDependencies": {
+    "git": "^0.1.5",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
     "concurrently": "^9.2.0",
     "nodemon": "^3.1.10",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "ts-node": "^10.9.2"
   }
 }
