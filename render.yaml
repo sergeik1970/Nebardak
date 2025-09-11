@@ -3,10 +3,12 @@ services:
     name: nebardak
     env: node
     plan: free
-    buildCommand: npm run build
+    buildCommand: npm ci && cd client && npm ci && cd .. && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: CLIENT_URL
         value: https://nebardak.onrender.com
+      - key: NODE_OPTIONS
+        value: "--max-old-space-size=1024"
