@@ -30,6 +30,16 @@ app.get('/api', (req: Request, res: Response) => {
   res.json({ message: 'Добро пожаловать в API Nebardak!' });
 });
 
+// Тестовый маршрут для проверки связи фронтенда и бэкенда
+app.get('/api/test', (req: Request, res: Response) => {
+  res.json({ 
+    message: 'Связь между фронтендом и бэкендом работает!',
+    timestamp: new Date().toISOString(),
+    server: 'Nebardak Backend',
+    status: 'success'
+  });
+});
+
 // Обработка всех остальных маршрутов - возвращаем React приложение
 app.get('*', (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
