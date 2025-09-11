@@ -1,37 +1,37 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import About from "./components/About";
 
 function App() {
-  const [message, setMessage] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  // const [message, setMessage] = useState<string>("");
+  // const [loading, setLoading] = useState<boolean>(false);
+  // const [error, setError] = useState<string | null>(null);
 
-  const fetchMessage = async () => {
-    setLoading(true);
-    setError(null);
+  // const fetchMessage = async () => {
+  //   setLoading(true);
+  //   setError(null);
 
-    try {
-      const response = await fetch("/api");
+  //   try {
+  //     const response = await fetch("/api");
 
-      if (!response.ok) {
-        throw new Error(
-          `Ошибка при получении данных с сервера: ${response.status}`
-        );
-      }
+  //     if (!response.ok) {
+  //       throw new Error(
+  //         `Ошибка при получении данных с сервера: ${response.status}`
+  //       );
+  //     }
 
-      const data = await response.json();
-      setMessage(data.message);
-    } catch (err) {
-      const errorMessage =
-        err instanceof Error ? err.message : "Произошла неизвестная ошибка";
-      setError(errorMessage);
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     const data = await response.json();
+  //     setMessage(data.message);
+  //   } catch (err) {
+  //     const errorMessage =
+  //       err instanceof Error ? err.message : "Произошла неизвестная ошибка";
+  //     setError(errorMessage);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   return (
     <>
