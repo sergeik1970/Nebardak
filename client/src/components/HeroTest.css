@@ -16,6 +16,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
+  margin-top: -2rem;
   overflow: hidden;
 }
 
@@ -83,7 +84,7 @@
   max-width: 400px;
   align-self: center;
   position: relative;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
   border-radius: 15px;
 }
 
@@ -190,6 +191,7 @@
   .hero-test {
     /* min-height: 80vh; */
     padding: 0;
+    margin-top: -3rem;
     /* padding: 3rem 2rem; */
   }
   
@@ -229,8 +231,8 @@
   
   .hero-test-arrow {
     display: block;
-    width: 100px;
-    height: 60px;
+    width: 280px;
+    height: 350px;
     background-image: url('/images/arrow.jpg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -308,8 +310,8 @@
   }
   
   .hero-test-arrow {
-    /* width: 120px; */
-    /* height: 80px; */
+    width: 350px;
+    height: 450px;
   }
   
   .hero-test-capsule {
@@ -350,8 +352,8 @@
   }
   
   .hero-test-arrow {
-    width: 140px;
-    height: 100px;
+    width: 400px;
+    height: 500px;
   }
   
   .hero-test-capsule {
@@ -369,6 +371,11 @@
   
   .hero-test-title-desktop {
     font-size: 3rem;
+  }
+  
+  .hero-test-arrow {
+    width: 450px;
+    height: 550px;
   }
   
   .hero-test-capsule {
