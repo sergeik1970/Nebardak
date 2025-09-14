@@ -3,6 +3,7 @@ import "./App.css";
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import About from "./components/About";
+import HeroTest from "./components/HeroTest";
 
 function App() {
   // const [message, setMessage] = useState<string>("");
@@ -38,6 +39,7 @@ function App() {
       <Navigation />
       <Header />
       <About />
+      <HeroTest />
 
       {/* Временный раздел для тестирования API - можно будет убрать позже */}
       <div
