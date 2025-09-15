@@ -231,18 +231,27 @@
   
   .hero-test-arrow {
     display: block;
-    width: 280px;
-    height: 350px;
+    width: 500px;
+    height: 620px;
     background-image: url('/images/arrow.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    flex-shrink: 0;
+    position: absolute;
+    top: 70%;
+    left: 33%;
+    transform: translate(-50%, -50%) rotate(75deg);
+    z-index: 1;
+    pointer-events: none;
   }
   
   .hero-test-capsule {
-    width: 280px;
-    height: 350px;
+    width: 320px;
+    height: 400px;
+    z-index: 2;
+    position: relative;
+    margin-left: auto;
+    margin-right: 6%;
   }
   
   .hero-test-buttons {
@@ -255,6 +264,7 @@
     position: relative;
     background-color: #ebebeb;
     border-radius: 0px;
+    z-index: 3;
   }
   
   .hero-test-buttons-group {
@@ -296,6 +306,22 @@
   .hero-test-buttons::after {
     display: none;
   }
+
+  .hero-test-visual {
+    margin-bottom: 0;
+    gap: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-test-arrow {
+    left: 35%;
+    width: 550px;
+  }
+  .hero-test-capsule {
+    width: 350px;
+    height: 450px;
+  }
 }
 
 /* Десктопы маленькие (1024px+) */
@@ -310,18 +336,29 @@
   }
   
   .hero-test-arrow {
-    width: 350px;
-    height: 450px;
+    width: 650px;
+    height: 800px;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%) rotate(80deg);
+    z-index: 1;
+    pointer-events: none;
   }
   
   .hero-test-capsule {
-    width: 350px;
-    height: 450px;
+    width: 400px;
+    height: 500px;
+    z-index: 2;
+    position: relative;
+    margin-left: auto;
+    margin-right: 5%;
   }
   
   .hero-test-buttons {
     padding: 3rem 2rem;
     /* max-width: 900px; */
+    z-index: 3;
   }
   
   .hero-test-buttons-group {
@@ -341,6 +378,17 @@
   }
 }
 
+@media (min-width: 1100px) {
+  .hero-test-arrow {
+    top: 60%;
+    left: 35%;
+    width: 700px;
+  }
+  .hero-test-capsule {
+    margin-right: 9%;
+  }
+}
+
 /* Десктопы большие (1200px+) */
 @media (min-width: 1200px) {
   .hero-test-content {
@@ -352,13 +400,34 @@
   }
   
   .hero-test-arrow {
-    width: 400px;
-    height: 500px;
+    width: 750px;
+    height: 920px;
+    position: absolute;
+    top: 65%;
+    left: 32%;
+    transform: translate(-50%, -50%) rotate(75deg);
+    z-index: 1;
+    pointer-events: none;
   }
   
   .hero-test-capsule {
-    width: 400px;
-    height: 500px;
+    width: 450px;
+    height: 560px;
+    z-index: 2;
+    position: relative;
+    margin-left: auto;
+    margin-right: 6%;
+    margin-top: 4%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .hero-test-arrow {
+    width: 850px;
+    left: 35%;
+  }
+  .hero-test-capsule {
+    margin-right: 8%;
   }
 }
 
@@ -374,18 +443,30 @@
   }
   
   .hero-test-arrow {
-    width: 450px;
-    height: 550px;
+    width: 850px;
+    height: 1040px;
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    transform: translate(-50%, -50%) rotate(75deg);
+    z-index: 1;
+    pointer-events: none;
+    width: 850px;
   }
   
   .hero-test-capsule {
-    width: 450px;
-    height: 550px;
+    width: 500px;
+    height: 620px;
+    z-index: 2;
+    position: relative;
+    margin-left: auto;
+    margin-right: 8%;
   }
   
   .hero-test-buttons {
     /* padding: 3.5rem 2.5rem; */
     /* max-width: 1000px; */
+    z-index: 3;
   }
   
   .hero-test-buttons-group {
